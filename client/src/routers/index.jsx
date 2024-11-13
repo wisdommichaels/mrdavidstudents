@@ -18,6 +18,9 @@ import Loader from "../components/Loader";
 import { GEN_URL } from "../constants/urlConstants";
 import Profile from "../pages/dev/Profile";
 import DevProfile from "../pages/DevProfile";
+import AllProjects from "../pages/AllProjects";
+import ProfileUpdateComponent from "../components/ProfileUpdateComponent";
+import Test from "../pages/Test";
 
 export const AppRouter = () => {
   function isloggedin() {
@@ -33,7 +36,10 @@ export const AppRouter = () => {
         { path: "login", element: <Login /> },
         { path: "register", element: <SignUp /> },
         { path: "contact", element: "<Contact />" },
+        { path: "allprojects", element: <AllProjects /> },
+        { path: "update", element: <ProfileUpdateComponent /> },
         { path: "dev/:username", element: <DevProfile /> },
+        { path: "test", element: <Test /> },
       ],
     },
     {

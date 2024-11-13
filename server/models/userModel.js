@@ -62,7 +62,7 @@ const userSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
-    required: true,
+    required: false,
   },
   profilePicture: {
     type: String,
@@ -95,6 +95,17 @@ const userSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
+  },
+  socials: {
+    linkedIn: {
+      type: String,
+    },
+    twitter: {
+      type: String,
+    },
+    github: {
+      type: String,
+    },
   },
   updatedAt: {
     type: Date,
